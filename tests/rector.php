@@ -12,6 +12,7 @@ return RectorConfig::configure()
         cacheDirectory: __DIR__ . '/../.rector'
     )->withPaths([
         __DIR__ . '/../src',
+        __DIR__ . '/../examples',
     ])
     ->withSets([
         PHPUnitSetList::PHPUNIT_110,
