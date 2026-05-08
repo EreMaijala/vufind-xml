@@ -47,24 +47,24 @@ foreach ($xmlDoc->all(path: $path) as $title) {
         $alternative[] = $xmlDoc->value($title);
     }
 }
-echo "Preferred titles: " . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
-echo "Alternative titles: " . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
+echo 'Preferred titles: ' . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
+echo 'Alternative titles: ' . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
 
 // Option 2: Default namespace:
 $xmlDoc->setDefaultNamespace($ns);
-$path = "lido/descriptiveMetadata/objectIdentificationWrap/titleWrap/titleSet/appellationValue";
+$path = 'lido/descriptiveMetadata/objectIdentificationWrap/titleWrap/titleSet/appellationValue';
 $preferred = [];
 $alternative = [];
 foreach ($xmlDoc->all(path: $path) as $title) {
-    $pref = $xmlDoc->attr($title, "pref");
+    $pref = $xmlDoc->attr($title, 'pref');
     if ('preferred' === $pref) {
         $preferred[] = $xmlDoc->value($title);
     } elseif ('alternative' === $pref) {
         $alternative[] = $xmlDoc->value($title);
     }
 }
-echo "Preferred titles: " . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
-echo "Alternative titles: " . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
+echo 'Preferred titles: ' . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
+echo 'Alternative titles: ' . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
 
 // Option 3: Path as an array:
 $path = [
@@ -73,7 +73,7 @@ $path = [
     "$ns objectIdentificationWrap",
     "$ns titleWrap",
     "$ns titleSet",
-    "$ns appellationValue"
+    "$ns appellationValue",
 ];
 $preferred = [];
 $alternative = [];
@@ -85,5 +85,5 @@ foreach ($xmlDoc->all(path: $path) as $title) {
         $alternative[] = $xmlDoc->value($title);
     }
 }
-echo "Preferred titles: " . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
-echo "Alternative titles: " . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
+echo 'Preferred titles: ' . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;
+echo 'Alternative titles: ' . PHP_EOL . implode(PHP_EOL, $preferred) . PHP_EOL . PHP_EOL;

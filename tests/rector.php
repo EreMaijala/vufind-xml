@@ -11,8 +11,9 @@ return RectorConfig::configure()
         cacheClass: FileCacheStorage::class,
         cacheDirectory: __DIR__ . '/../.rector'
     )->withPaths([
-        __DIR__ . '/../src',
         __DIR__ . '/../examples',
+        __DIR__ . '/../src',
+        __DIR__ . '/../tests',
     ])
     ->withSets([
         PHPUnitSetList::PHPUNIT_110,

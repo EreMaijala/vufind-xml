@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ruleset name="VuFind Coding Standards" namespace="VuFind\PHPCS">
   <description>Coding standards for VuFind.</description>
-  <file>../src</file>
   <file>../examples</file>
-  <file>.</file>
+  <file>../src</file>
+  <file>../tests</file>
   <exclude-pattern>*/config/*</exclude-pattern>
   <exclude-pattern>*.php-cs-fixer.*</exclude-pattern>
   <exclude-pattern>*rector.*</exclude-pattern>

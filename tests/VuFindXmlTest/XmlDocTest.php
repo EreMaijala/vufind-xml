@@ -672,7 +672,7 @@ class XmlDocTest extends \PHPUnit\Framework\TestCase
         $titleSetPath = "{{$ns}}lido/{{$ns}}descriptiveMetadata/{{$ns}}objectIdentificationWrap/{{$ns}}titleWrap"
             . "/{{$ns}}titleSet";
         $xml->modify(
-            function (&$node, $path, $index) use ($xml, $titleSetPath, $xmlReplacement) {
+            function (&$node, $path, $index) use ($xml, $titleSetPath, $xmlReplacement): void {
                 if ($path === $titleSetPath && 0 === $index) {
                     $xml->replaceChildren($node, $xmlReplacement);
                 }
@@ -755,7 +755,7 @@ class XmlDocTest extends \PHPUnit\Framework\TestCase
         $xml = new XmlDoc();
         $xml->parse($this->getFixture('xml-with-ns.xml'));
         $xml->modify(
-            function (&$node, $path) use ($xml) {
+            function (&$node, $path) use ($xml): void {
                 if ($path === '{http://www.lido-schema.org}lido') {
                     $xml->setName($node, '{http://foo}lido');
                 }

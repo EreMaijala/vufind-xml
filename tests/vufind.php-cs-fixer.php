@@ -2,7 +2,9 @@
 
 $finder = new PhpCsFixer\Finder();
 $finder->in(__DIR__)
-    ->in(__DIR__ . '/../src');
+    ->in(__DIR__ . '/../examples')
+    ->in(__DIR__ . '/../src')
+    ->in(__DIR__ . '/../tests');
 
 $rules = [
     '@PHP8x2Migration' => true,
