@@ -50,4 +50,4 @@ This notation can be used for a single-level path query.
 Examples
 --------
 
-See the examples directory for simple examples, and tests in tests/NatLibFiTest/VuFindXml/XmlDocTest.php for more comprehensive examples.
+See the examples directory for simple examples, and tests in tests/VuFindXmlTest/VuFindXml/XmlDocTest.php for more comprehensive examples.
